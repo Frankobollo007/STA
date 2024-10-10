@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La mia flip card</title>
+    <style>
+        body {
+          font-family: Arial, Helvetica, sans-serif;
+        }
+        
+        .flip-card {
+          background-color: transparent;
+          width: 300px;
+          height: 300px;
+          perspective: 1000px;
+        }
+        
+        .flip-card-inner {
+          position: relative;
+          width: 100%;
+          height: 100%;
+          text-align: center;
+          transition: transform 0.6s;
+          transform-style: preserve-3d;
+          box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+        }
+        
+        .flip-card:hover .flip-card-inner {
+          transform: rotateY(180deg);
+        }
+        
+        .flip-card-front, .flip-card-back {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+        }
+        
+        .flip-card-front {
+          background-color: #bbb;
+          color: black;
+        }
+        
+        .flip-card-back {
+          background-color: rgb(63, 41, 185);
+          color: white;
+          transform: rotateY(180deg);
+        }
+        </style>
+        </head>
+        <body>
+        
+        <h1>Foto fra</h1>
+        <h3>Daje:</h3>
+        
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="fra.jpg" alt="FRA" style="width:300px;height:300px;">
+            </div>
+            <div class="flip-card-back">
+              <h1>Francesco Curcetti</h1>
+              <p>Studente</p>
+              <p>sempre forza juve stabia</p>
+            </div>
+          </div>
+        </div>
+        <ul>
+            <li> Sono Francesco Curcetti e sono nato il 17/08/09 a Rimini </li>
+            <br>
+            <li> Dovevo nascere ad ottobre, ma io e il mio gemmello, ci siamo stancati e
+            siamo nati prematuramente stando nelle incubatrici circa un mese. </li>
+            <br>
+            <li> Io ho 15 anni e vado al Maxwell, un istituto tecnico di nichelino,
+            città in cui vivo. </li>
+            <br>
+            <li> Sono un ragazzo sportivo e anche un po' pigro, perché se devo stare sul divano
+            allora è perché c'è la mia squadra del cuore e la Formula 1,
+            che mi ha trasmesso mio padre fin da piccolo.</li>
+            <br>
+            <li> La cucina è un'altra mia passione, trasmessa da mia mamma e mia nonna
+            perché vedere masterchef con mia mamma e fare le polpette con mia
+            nonna da piccolo mi è piaciuto molto.</li>
+            <br>
+            <h1>
+            Futuro?
+            </h1>
+            <li>sinceramente non ho le idee chiare sul mio futuro,
+            perché non un sogno preciso però devessere qualcosa che ripaghi i miei sforzi.</li>
+            <br>
+            <li> Dopo il diploma spero di indirizzarmi sul lavoro e di non proseguire all' università</li>
+            </ul>
+           
+        </body>
+        </html>
