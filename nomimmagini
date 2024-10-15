@@ -1,0 +1,64 @@
+<!DOCTYPE html> <html lang="en">
+ <head> <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>DIV & CCS</title>
+   <style> #scatola1{ background-color: gray; width: 300px; height: 300px; margin: 5px; padding: 5px; }
+    #scatola2{ background-color: gray; width: 300px; height: 300px; margin: 5px; padding: 5px; }
+     #scatola3{ background-color: gray; width: 300px; height: 300px; margin: 5px; padding: 5px; } 
+     #scatola4{ background-color: gray; width: 300px; height: 300px; margin: 5px; padding: 5px } 
+     #scatola5{ background-color: white; width: 150px; height: 125px; margin: 5px; padding: 5px; }
+      #scatola6{ background-color: white; width: 275px; height: 125px; margin: 5px; padding: 5px;}
+       #scatola7{background-color: white; width: 150px; height: 125px; margin: 5px; padding: 5px;}
+        #scatola8{ background-color: white; width: 275px; height: 125px; margin: 5px; padding: 5px; }
+         #scatola9{ background-color: white; width: 150px; height: 125px; margin: 5px; padding: 5px; } 
+         #scatola10{ background-color: white; width: 275px; height: 125px; margin: 5px; padding: 5px; }
+          #scatola11{ background-color: white; width: 150px; height: 125px; margin: 5px; padding: 5px; } 
+          #scatola12{ background-color: white; width: 275px; height: 125px; margin: 5px; padding: 5px; }
+          </style> 
+          </body>
+           </html>
+            </head>
+             <body>
+
+                <div id="scatola1">
+                    <div id="scatola12">
+                        <img src="LG.jpg"width="150"height="125">
+
+                    </div>
+                    <div id="scatola11">
+                        <li>questa immagine rappresenta un Disc Drive LG WH16NS60
+                             montata nel case di un pc</li>
+                    </div>
+                </div>
+
+                <div id="scatola2">
+                    <div id="scatola10">
+                        <img src="VENTOLA.jpg"width="150"height="125">
+
+                    </div>
+                    <div id="scatola9">
+                        <li>In questa immagine è raffigurata una ventola di raffreddamento
+                            con dei cavi colorat, collegati alla scheda madre</li>
+                    </div>
+                </div>
+               
+                <div id="scatola3">
+                    <div id="scatola8">
+                        <img src="VENTOLA G.jpg"width="150"height="125">
+
+                    </div>
+                    <div id="scatola7">
+                        <li>Qui è raffigurata una ventola per il riciclo dell'aria 
+                            per mantenere i componeti ad una temperatura sostenibile </li>
+                    </div>
+                </div>
+
+                <div id="scatola4">
+                    <div id="scatola6">
+                        <img src="OK.jpg"width="150"height="125">
+
+                    </div>
+                    <div id="scatola5">
+                        <li>Nel l'ultima immagine è rappresentato un Hard Disk</li>
+                    </div>
+                </div>
