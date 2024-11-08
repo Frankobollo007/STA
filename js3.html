@@ -1,0 +1,82 @@
+!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nascondi javascript</title>
+    <style>
+        .aforisma {
+      margin: 20px 0;
+      padding: 15px;
+      border: 1px solid #ffd3d3;
+      background-color: #ffd3d3;
+    }
+#miobottone3 {
+    background-color: #6b6b6b; /* Green */
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+  }
+  
+  #miobottone3 {
+    background-color: white; 
+    color: black; 
+    border: 2px solid  #6b6b6b;
+  }
+  
+  #miobottone3:hover {
+    background-color: #6b6b6b;
+    color: white;
+  }
+  
+      </style>
+  </head>
+  <body>
+    <h1>Aforismi di Scienziati</h1>
+
+    <div class="aforisma">
+      <p id="aforisma1">“La differenza tra chi sei e chi vuoi essere, è quello che fai.” -Bill Phillips</p>
+      <button onclick="nascondiTesto('aforisma1')">Nascondi Aforisma</button>
+    </div>
+  
+    <div class="aforisma">
+      <p id="aforisma2">"Coloro che sognano di giorno sanno molte cose che sfuggono a chi sogna soltanto di notte". - Edgar Allan Poe</p>
+      <button onclick="nascondiTesto('aforisma2')">Nascondi Aforisma</button>
+    </div>
+  
+    <div class="aforisma">
+      <p id="aforisma3">"Il tempo per leggere, come il tempo per amare, dilata il tempo per vivere". -Daniel Pennac</p>
+      <button onclick="nascondiTesto('aforisma3')">Nascondi Aforisma</button>
+    </div>
+  
+    <div class="aforisma">
+      <p id="aforisma4">"Non sempre le nuvole offuscano il cielo: a volte lo illuminano".Elsa Morante
+
+        </p>
+      <button onclick="nascondiTesto('aforisma4')">Nascondi Aforisma</button>
+    </div>
+  
+    <div class="aforisma">
+      <p id="aforisma5">"La scienza è l'arte di comprendere ciò che ci circonda." - Carl Sagan</p>
+      <button onclick="nascondiTesto('aforisma5')">Nascondi Aforisma</button>
+    </div>
+  
+    <script>
+      function nascondiTesto(id) {
+        const testo = document.getElementById(id);
+        testo.style.display = "none"; 
+      }
+      </script>
+  
+  
+  
+  
+  </body>
+  </html>
