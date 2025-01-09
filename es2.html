@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abitanti</title>
+</head>
+<body>
+    <style>
+        #ottieniAbitanti {
+    background-color: #6b6b6b; /* Green */
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+  }
+  
+  #ottieniAbitanti {
+    background-color: white; 
+    color: black; 
+    border: 2px solid  #6b6b6b;
+  }
+  
+  #ottieniAbitanti:hover {
+    background-color: #6b6b6b;
+    color: white;
+  }
+  
+    </style>
+    
+    
+    
+    
+    <input type="text" id="citta" placeholder="Città"><br>
+    <button id= "ottieniAbitanti" onclick="ottieniAbitanti();">Inserisci la città dove abiti</button>
+    <p>Abitanti: <b id="output">0</b></p>
+
+    <script>
+        function ottieniAbitanti() {
+            let citta = document.getElementById("citta").value;
+            
+            if (citta === "torino") {
+                document.getElementById("output").innerHTML = "851.199";
+            } else if (citta === "nichelino") {
+                document.getElementById("output").innerHTML = "46.006";
+            } else if (citta === "rivoli") {
+                document.getElementById("output").innerHTML = "46.799";
+            } else if (citta === "collegno") {
+                document.getElementById("output").innerHTML = "48.031";
+            } else if (citta === "vinovo") {
+                document.getElementById("output").innerHTML = "15.323";
+            } else if (citta === "settimo") {
+                document.getElementById("output").innerHTML = "45.693";
+            } else if (citta === "chieri") {
+                document.getElementById("output").innerHTML = "35.831";
+            } else if (citta === "moncalieri") {
+                document.getElementById("output").innerHTML = "55.751";
+            } else {
+                document.getElementById("output").innerHTML = "-";
+            }
+        }
+    </script>
+</body>
+</html>
