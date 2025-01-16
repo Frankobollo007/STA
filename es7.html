@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stima Valore Immobiliare</title>
+    <style>
+#miobottone3 {
+    background-color: #6b6b6b; /* Green */
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+  }
+  
+  #miobottone3 {
+    background-color: white; 
+    color: black; 
+    border: 2px solid  #6b6b6b;
+  }
+  
+  #miobottone3:hover {
+    background-color: #6b6b6b;
+    color: white;
+  }
+          }
+          /* Rimuove le freccette dagli input di tipo number */
+          input[type=number]::-webkit-outer-spin-button,
+          input[type=number]::-webkit-inner-spin-button {
+              -webkit-appearance: none;
+              margin: 0;
+          }
+
+          input[type=number] {
+              appearance: textfield;
+              -moz-appearance: textfield;
+          }
+    </style>
+</head>
+<body>
+    <h1>Calcola il valore immobiliare </h1>
+    <p>Inserire la città (Genova, Savona, Imperia):</p>
+    <input type="text" id="citta" placeholder="Città"><br>
+    <p>Inserire i metri quadrati della casa:</p>
+    <input type="number" id="mq" placeholder="Metri quadrati"><br>
+    <p>Inserire la distanza dal mare (in metri):</p>
+    <input type="number" id="distanza" placeholder="Distanza dal mare (in metri)"><br>
+    <p><button class="miobotton1" id="miobotton1" onclick="stimaValore()">Calcola Valore</button></p>
+    <p id="output"></p>
+
+    <script>
+        function stimaValore() {
+            let citta = document.getElementById("citta").value.toLowerCase();
+            let mq = document.getElementById("mq").value;
+            let distanza = document.getElementById("distanza").value;
+            let costonormale;
+
+            if (citta === 'genova') {
+                costonormale = 5000;
+            } else if (citta === 'savona') {
+                costonormale = 7000;
+            } else if (citta === 'imperia') {
+                costonormale = 6000;
+            } else {
+                document.getElementById("output").innerText = "Città non valida. Inserisci Genova, Savona o Imperia.";
+                return;
+            }
+
+            let incremento;
+            if (distanza < 100) {
+                incremento = 3000;
+            } else if (distanza < 500) {
+                incremento = 1500;
+            } else {
+                incremento = 500;
+            }
+
+            let costoAlMetroQuadro = costonormale + incremento;
+            let valoreTotale = costoAlMetroQuadro * mq;
+
+            document.getElementById("output").innerText = "Il costo al metro quadro è " + costoAlMetroQuadro + " euro. Il valore totale della casa è " + valoreTotale + " euro.";
+        }
+    </script>
+</body>
+</html>
