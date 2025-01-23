@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Le leggi di Ohm</title>
+    <style>
+        body {
+          font-family: "Courier New", Courier, monospace ;
+        }
+        
+        .flip-card {
+            display:flex;
+          background-color: transparent;
+          width: 1000px;
+          height: 800px;
+          perspective: 1000px;
+        }
+        
+        .flip-card-inner {
+          position: relative;
+          width: 100%;
+          height: 100%;
+          text-align: center;
+          transition: transform 0.6s;
+          transform-style: preserve-3d;
+          box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+        }
+        
+        .flip-card:hover .flip-card-inner {
+          transform: rotateY(180deg);
+        }
+        
+        .flip-card-front, .flip-card-back {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+        }
+        
+        .flip-card-front {
+          background-color: #bbb;
+          color: black;
+        }
+        
+        .flip-card-back {
+          background-color: rgb(38, 33, 70);
+          color: white;
+          transform: rotateY(180deg);
+        }
+        .flip-card2 {
+            display:flex;
+          background-color: transparent;
+          width:500px;
+          height: 600px;
+          perspective: 1000px;
+        }
+        
+        .flip-card-inner2 {
+          position: relative;
+          width: 100%;
+          height: 100%;
+          text-align: center;
+          transition: transform 0.6s;
+          transform-style: preserve-3d;
+          box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+        }
+        
+        .flip-card2:hover .flip-card-inner2 {
+          transform: rotateY(180deg);
+        }
+        
+        .flip-card-front2, .flip-card-back2 {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+        }
+        
+        .flip-card-front2 {
+          background-color: #bbb;
+          color: black;
+        }
+        
+        .flip-card-back2 {
+          background-color: rgb(38, 33, 70);
+          color: white;
+          transform: rotateY(180deg);
+        }
+        #bottone {
+    background-color: #6b6b6b; /* Green */
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+  }
+  
+  #bottone {
+    background-color: white; 
+    color: black; 
+    border: 2px solid  #6b6b6b;
+  }
+  
+  #bottone:hover {
+    background-color: #6b6b6b;
+    color: white;
+  }
+
+        
+        input[type=number]::-webkit-outer-spin-button,
+        input[type=number]::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        input[type=number] {
+            appearance: textfield;
+            -moz-appearance: textfield;
+        }
+        
+        </style>
+        </head>
+        <body>
+        
+        <h1>Leggi di Ohm</h1>
+        <h3>Mappa e leggi di Ohm:</h3>
+        
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="Leggi di ohm.png" alt="Leggi di Ohm" style="width:300px;height:300px;">
+            </div>
+            <div class="flip-card-back">
+              <h1>1° legge di Ohm</h1>
+              <h2>La corrente elettrica (I) che attraversa un conduttore è direttamente proporzionale alla differenza di potenziale (V) e inversamente proporzionale alla resistenza (R) del conduttore. Matematicamente, è espressa come I = V/R. Questa legge è fondamentale per comprendere il comportamento dei circuiti elettrici e consente di calcolare facilmente tensione, corrente e resistenza se si conoscono gli altri due valori.</h2>
+              <img src="Circuitohm.png" alt="circuito semplice della 1° legge" style="width: 200px;height: 220px;">
+            </div>
+          </div>
+        </div>
+        
+        <h2>calcolare a legge di Ohm</h2>
+        <p>Inserisci il numero della formula da utilizzare:</p>
+        1 V=I⋅R                    2 I=V/R​                 3 R=V/I 
+        <input type="number" id="formula" placeholder="1, 2 o 3"><br>
+        <div id="valori">
+            <p>scrivi i numeri per calcolare:</p>
+            <input type="number" id="valore1" placeholder="I o R o V"><br>
+            <input type="number" id="valore2" placeholder="R o V o I"><br>
+        </div>
+        <p><button id="bottone" id="bottone" onclick="calcola()">Calcola</button></p>
+        <p id="output"></p>
+    
+        <script>
+            function calcola() {
+                let formula = document.getElementById("formula").value;
+                let valore1 = document.getElementById("valore1").value;
+                let valore2 = document.getElementById("valore2").value;
+                let risultato;
+    
+                if (formula == 1) {
+                    risultato = valore1 * valore2; 
+                    document.getElementById("output").innerText = "Il voltaggio (V) è " + risultato + " Volt.";
+                } else if (formula == 2) {
+                    risultato = valore1 / valore2; 
+                    document.getElementById("output").innerText = "L'intensità di corrente (I) è " + risultato + " Ampere.";
+                } else if (formula == 3) {
+                    risultato = valore1 / valore2; 
+                    document.getElementById("output").innerText = "La resistenza (R) è " + risultato + " Ohm.";
+                } else {
+                    document.getElementById("output").innerText = "Formula non specificata. Srivi il numero della formula, 1, 2 o 3.";
+                }
+            }
+        </script>
+        
+        
+        
+        
+        
+        
+        <h1>Ohm</h1>
+        <div class="flip-card2">
+            <div class="flip-card-inner2">
+              <div class="flip-card-front2">
+                <img src="ohm.jpg" alt="Ohm" style="width:300px;height:300px;">
+              </div>
+              <div class="flip-card-back2">
+                <h1>Ohm</h1>
+                <h2>Georg Simon Ohm era un fisico e matematico tedesco, nato il 16 marzo 1789 a Erlangen e morto il 6 luglio 1854 a Monaco di Baviera. È noto principalmente per la sua scoperta della legge di Ohm, che descrive la relazione tra tensione, corrente e resistenza in un circuito elettrico.
+
+                    Ohm iniziò la sua carriera come insegnante di scuola superiore e successivamente si dedicò alla ricerca scientifica. La sua legge, pubblicata nel 1827, è una delle fondamenta dell'elettrotecnica moderna.</h2>
+              </div>
+            </div>
+          </div>
+        </body>
+        </html>
