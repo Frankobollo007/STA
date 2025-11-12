@@ -1,33 +1,58 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
+ <!DOCTYPE html>
+<html lang="it">
+<head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Video dei protisti</title>
+  <title>Protisti in movimento</title>
   <style>
     body {
       font-family: Arial, sans-serif;
-      text-align: center;
-      background-color: #f0f0f0;
+      background-color: #111;
+      color: white;
       margin: 0;
-      padding: 50px;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
     }
+
+    h1 {
+      margin-bottom: 20px;
+      font-weight: normal;
+    }
+
+    .video-container {
+      position: relative;
+      width: 90vw;        /* occuperà il 90% della larghezza schermo */
+      max-width: 400px;   /* limite massimo per desktop */
+      aspect-ratio: 9 / 16; /* mantiene proporzione verticale */
+      overflow: hidden;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.4);
+    }
+
     video {
-      width: 80%;
-      max-width: 800px;
-      border: 3px solid #333;
-      border-radius: 10px;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
   </style>
 </head>
 <body>
 
-  <h1>Protisti!!</h1>
-  
-  <video controls>
-    <source src="video2.MOV" type="video2/MOV">
-    Il tuo browser non supporta il tag video.
-  </video>
+  <h1>🎥video</h1>
+
+  <div class="video-container">
+    <video controls>
+      <source src="video2.mov" type="video/quicktime">
+      Il tuo browser non supporta il formato .MOV.
+    </video>
+  </div>
 
 </body>
 </html>
